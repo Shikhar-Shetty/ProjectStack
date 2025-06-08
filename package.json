@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@radix-ui/react-select": "^2.2.5",
     "@radix-ui/react-slot": "^1.2.3",
     "autoprefixer": "^10.4.21",
@@ -22,6 +23,14 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "tailwind-merge": "^3.3.0"
+=======
+    "@prisma/client": "^6.9.0",
+    "@prisma/extension-accelerate": "^2.0.1",
+    "next": "15.3.2",
+    "prisma": "^6.9.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+>>>>>>> 7426dbbee6e7bfb6d1547789951b928de7e1f4cb
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
@@ -29,8 +38,8 @@
     "@types/node": "^20.17.57",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "15.3.2",
+    "eslint": "^9.28.0",
+    "eslint-config-next": "^15.3.3",
     "eslint-plugin-unused-imports": "^4.1.4",
     "tailwindcss": "^4.1.8",
     "ts-node": "^10.9.2",
