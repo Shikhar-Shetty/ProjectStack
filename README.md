@@ -55,42 +55,6 @@ Built as a group project by our class to streamline and enrich collaborative lea
 
 ---
 
-## 📁 Project Structure
-
-```bash
-/app
-  /auth
-  /dashboard
-  /explore
-  /project/[id]
-  /profile/[username]
-
-/components
-  /ui
-  /shared
-
-/lib
-  prisma.ts
-  auth.ts
-
-/schemas
-  authSchemas.ts
-  projectSchemas.ts
-
-/prisma
-  schema.prisma
-
-/pages/api
-  /auth
-    [...nextauth].ts
-  /project.ts
-
-/public
-/styles
-```
-
----
-
 ## Installation
 
 ### 1. Clone the repo
