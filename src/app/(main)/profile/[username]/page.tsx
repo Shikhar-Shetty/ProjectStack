@@ -7,11 +7,7 @@ import Image from 'next/image';
 import { getUserById } from "../../../../../actions/profile"
 import  Link  from 'next/link';
 
-type Props = {
-    params: { username: string }
-}
-
-export default async function Profile({ params }: Props) {
+export default async function Profile({ params }: { params: Promise<{ username: string }> }) {
     const { username } = await params;
     const user = await getUserById(username);
     console.log(user);
