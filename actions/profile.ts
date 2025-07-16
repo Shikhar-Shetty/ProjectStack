@@ -38,3 +38,22 @@ export async function editProfile(data: ProfileData){
     return updatedProfile;
 }
 
+export async function getUserById(username: string){
+    const userWithProfile = await prisma.user.findFirst({
+        where: { name: username },
+        include: {
+            profile: true,
+        }
+    });
+
+    if (!userWithProfile || !userWithProfile.profile) {
+        console.log("User or Profile not found");
+        return null;
+    }
+
+    return {
+        ...userWithProfile.profile,
+        username: userWithProfile.name,
+        image: userWithProfile.image
+    };
+}
