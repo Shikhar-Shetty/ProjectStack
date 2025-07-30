@@ -57,3 +57,30 @@ export async function getUserById(username: string){
         image: userWithProfile.image
     };
 }
+
+export async function filteredUser(req: string){
+    if(!req.trim()) return [];
+    const users = await prisma.profile.findMany({
+        where: {
+            user: {   
+                name: {
+                    contains: req, 
+                    mode: 'insensitive'
+                }
+            }
+        },
+        select: {
+            id: true,
+            name: true,
+            user: {
+                select: {
+                    name: true,
+                    image: true
+                }
+            }
+        },
+        take: 5
+        
+    })
+    return users;
+}
