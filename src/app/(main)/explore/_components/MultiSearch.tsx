@@ -3,6 +3,7 @@
 import { useTransition, useState } from 'react';
 import { filteredUser } from '../../../../../actions/profile';
 import Link from 'next/link';
+import Image from 'next/image';
 
 type UserResult = {
   id: string;
@@ -53,10 +54,12 @@ function MultiSearch() {
           {users.map((user) => (
             <Link key={user.id} href={`/profile/${user.user.name}`}>
               <li  className="flex items-center gap-3 p-3 my-1 rounded-lg bg-gray-900 transition">
-                <img
+                <Image
                   src={user.user.image ?? '/default-avatar.png'}
                   alt={user.user.name}
                   className="w-10 h-10 rounded-full object-cover"
+                  height={30}
+                  width={30}
                 />
                 <span className="font-medium  text-gray-400">@{user.user.name}</span>
               </li>
