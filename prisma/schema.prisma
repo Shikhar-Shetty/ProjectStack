@@ -58,14 +58,43 @@ model VerificationToken {
 }
 
 model Profile {
-  id      String  @id @default(cuid())
-  name    String
-  image   String?
-  section String
-  branch  String
-  year    String
-  skills  String[]
-  bio     String?
-  userId  String  @unique
-  user    User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  id           String        @id @default(cuid())
+  name         String
+  image        String?
+  section      String
+  branch       String
+  year         String
+  skills       String[]
+  bio          String?
+  userId       String        @unique
+  user         User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  projects     Project[]
+  applications Application[]
+}
+
+model Project {
+  id             String        @id @default(cuid())
+  requiredSkills String[]
+  title          String
+  description    String
+  startDate      DateTime
+  endDate        DateTime
+  postedOn       DateTime      @default(now())
+  githubLink     String?
+  projectStatus  String
+  isActive       Boolean
+  userId         String
+  user           Profile       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  applicants     Application[]
+}
+
+model Application {
+  id        String   @id @default(cuid())
+  profileId String
+  profile   Profile  @relation(fields: [profileId], references: [id], onDelete: Cascade)
+  project   Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  projectId String
+  appliedAt DateTime @default(now())
+
+  @@unique([profileId, projectId])
 }
