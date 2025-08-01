@@ -10,5 +10,18 @@ export const onboardingSchema = z.object({
     bio: z.string().optional()
 })
 
-
 export type OnboardingType = z.infer<typeof onboardingSchema>
+
+
+export const projectSchema = z.object({
+    title: z.string().min(1),
+    requiredSkills: z.array(z.string()).nonempty(),
+    description: z.string(),
+    startDate: z.coerce.date(),
+    endDate: z.coerce.date(),
+    githubLink: z.string().optional(),
+    projectStatus: z.string(),
+    isActive: z.boolean()
+})
+
+export type ProjectType = z.infer<typeof projectSchema>
