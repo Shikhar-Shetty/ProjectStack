@@ -25,3 +25,15 @@ export const projectSchema = z.object({
 })
 
 export type ProjectType = z.infer<typeof projectSchema>
+
+const projectUpdateSchema = z.object({
+  id: z.string().min(1),
+  description: z.string().optional(),
+  startDate: z.coerce.date().optional(),
+  endDate: z.coerce.date().optional(),
+  githubLink: z.string().optional(),
+  projectStatus: z.string().optional(),
+  isActive: z.boolean().optional()
+});
+
+export type ProjectUpdate = z.infer<typeof projectUpdateSchema>;
