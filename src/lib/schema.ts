@@ -26,7 +26,7 @@ export const projectSchema = z.object({
 
 export type ProjectType = z.infer<typeof projectSchema>
 
-const projectUpdateSchema = z.object({
+export const projectUpdateSchema = z.object({
   id: z.string().min(1),
   description: z.string().optional(),
   startDate: z.coerce.date().optional(),
