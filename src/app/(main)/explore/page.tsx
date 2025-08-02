@@ -3,7 +3,7 @@ import MultiSearch from './_components/MultiSearch'
 
 function page() {
   return (
-    <div className='w-full h-full'>
+    <div className='w-full h-screen'>
       <MultiSearch/>
     </div>
   )
