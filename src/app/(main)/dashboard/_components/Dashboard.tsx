@@ -412,7 +412,7 @@ function Dashboard() {
 
                         <Button
                           onClick={() => setPopup(item)}
-                          className="w-full bg-slate-800 hover:bg-slate-700 text-white border-slate-700"
+                          className="w-full cursor-pointer bg-slate-800 hover:bg-slate-700 text-white border-slate-700"
                         >
                           View Details
                           <ExternalLink className="w-4 h-4 ml-2" />
@@ -446,7 +446,7 @@ function Dashboard() {
                   variant="ghost"
                   size="icon"
                   onClick={() => setPopup(null)}
-                  className="text-slate-400 hover:text-white hover:bg-slate-800"
+                  className="text-slate-400 cursor-pointer hover:text-white hover:bg-slate-800"
                 >
                   <X className="w-5 h-5" />
                 </Button>
@@ -563,7 +563,7 @@ function Dashboard() {
                   <Button
                     onClick={handleApply}
                     disabled={loading || done === popup.title}
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white disabled:opacity-50"
+                    className="w-full cursor-pointer bg-blue-600 hover:bg-blue-700 text-white disabled:opacity-50"
                   >
                     {loading ? (
                       <>
