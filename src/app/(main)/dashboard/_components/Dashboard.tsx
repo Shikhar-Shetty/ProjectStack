@@ -257,13 +257,13 @@ function Dashboard() {
       </div>
 
       {isPending && searchFilter === "users" && (
-        <div className="max-w-7xl mx-auto px-6 py-4">
+        <div className="max-w-7xl mx-auto mt-8 px-6 ">
           <p className="text-slate-400">Searching users...</p>
         </div>
       )}
 
-      {filtered && (
-        <div className="max-w-7xl mx-auto px-6 py-2">
+      {filtered && !isPending && (
+        <div className="max-w-7xl mx-auto px-6 pt-8">
           <div className="flex items-center gap-2 text-sm text-slate-400">
             <span>
               Found {searchFilter === "users" ? users.length : filteredArray.length} result
@@ -311,7 +311,7 @@ function Dashboard() {
           </div>
         )}
 
-        {searchFilter === "users" && users.length <= 0 && (
+        {searchFilter === "users" && users.length <= 0  && !isPending && (
           <div className="flex flex-col items-center justify-center py-16 px-4">
             <div className="w-16 h-16 mb-4 rounded-full bg-slate-700/30 flex items-center justify-center">
               <Search className="w-6 h-6 text-slate-400" />

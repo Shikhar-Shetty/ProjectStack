@@ -78,8 +78,8 @@ export default function Profile({ profile }: { profile: ProfileProps }) {
   }, [session, status]);
 
   return (
-    <div className="min-h-screen py-5 px-6 md:px-12 bg-gray-900 text-white">
-      <div className="max-w-7xl flex  rounded-lg mx-auto bg-gray-950/20 px-6 py-3">
+    <div className="min-h-screen py-5 px-6 md:px-12 bg-black text-white">
+      <div className="max-w-7xl flex  rounded-lg mx-auto bg-gray-900/20 px-6 py-3">
           <div className="w-full flex items-center justify-between">
             <div className="flex items-center space-x-4">
             
@@ -94,7 +94,7 @@ export default function Profile({ profile }: { profile: ProfileProps }) {
               {!isEditing ? (
                 <Button
                   onClick={() => setIsEditing(true)}
-                  className="bg-gray-800 cursor-pointer hover:bg-gray-700 border border-gray-700 text-gray-200 transition-all duration-200 shadow-lg hover:shadow-xl"
+                  className="bg-gray-800/20 cursor-pointer hover:bg-gray-700/20 border border-gray-700/20 text-gray-200 transition-all duration-200 shadow-lg hover:shadow-xl"
                 >
                   <Edit className="w-4 h-4 mr-2" />
                   Edit Profile
@@ -103,7 +103,7 @@ export default function Profile({ profile }: { profile: ProfileProps }) {
                 <>
                   <Button
                     onClick={handleSubmit(onSubmit)}
-                    className="bg-gradient-to-r from-blue-600 cursor-pointer to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-lg hover:shadow-xl transition-all duration-200"
+                    className=" bg-sky-600/10 cursor-pointer hover:bg-sky-600/20 text-white shadow-lg hover:shadow-xl transition-all duration-200"
                   >
                     {loading ? (
                       <div className="flex space-x-1">
@@ -123,7 +123,7 @@ export default function Profile({ profile }: { profile: ProfileProps }) {
                       reset()
                       setIsEditing(false)
                     }}
-                    className="bg-gray-800 cursor-pointer hover:bg-gray-700 border border-gray-700 text-gray-200 transition-all duration-200"
+                    className="bg-gray-800/20 cursor-pointer hover:bg-gray-700/20 border border-gray-700/20 text-gray-200 transition-all duration-200"
                   >
                     <X className="w-4 h-4 mr-2" />
                     Cancel
@@ -134,9 +134,9 @@ export default function Profile({ profile }: { profile: ProfileProps }) {
           </div>
         </div>
 
-      <main className="container max-w-7xl flex mx-auto py-8">
-        <div className="w-full mx-auto">
-          <Card className="bg-gray-900 border-gray-800">
+      <main className="container max-w-7xl  flex mx-auto py-8">
+        <div className="w-full  mx-auto">
+          <Card className="bg-gray-900/20 border-gray-800/10">
             <CardHeader className="pb-4">
               <div className="flex items-start gap-6">
                 <div className="w-24 h-24 rounded-full overflow-hidden">
@@ -152,21 +152,21 @@ export default function Profile({ profile }: { profile: ProfileProps }) {
                   <h2 className="text-2xl font-bold text-white mb-2">{session?.user?.name || updatedProfile.name}</h2>
                   {isEditing ? (
                     <div className="flex flex-col md:flex-row gap-4">
-                      <select {...register("branch")} className="bg-gray-800 border border-gray-700 text-white px-3 py-2 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 transition duration-150">
+                      <select {...register("branch")} className="bg-gray-800/20 border border-gray-700/20 text-white px-3 py-2 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 transition duration-150">
                         <option className="bg-slate-800 text-white" value="">Select Branch</option>
                         <option className="bg-slate-800 text-white" value="CSE">CSE</option>
                         <option className="bg-slate-800 text-white" value="ISE">ISE</option>
                         <option className="bg-slate-800 text-white" value="ICB">ICB</option>
                         <option className="bg-slate-800 text-white" value="AIML">AIML</option>
                       </select>
-                      <select {...register("year")} className="bg-gray-800 border border-gray-700 text-white px-3 py-2 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 transition duration-150">
+                      <select {...register("year")} className="bg-gray-800/20 border border-gray-700/20 text-white px-3 py-2 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 transition duration-150">
                         <option className="bg-slate-800 text-white" value="">Select Year</option>
                         <option className="bg-slate-800 text-white" value="First Year">First Year</option>
                         <option className="bg-slate-800 text-white" value="Second Year">Second Year</option>
                         <option className="bg-slate-800 text-white" value="Third Year">Third Year</option>
                         <option className="bg-slate-800 text-white" value="Fourth Year">Fourth Year</option>
                       </select>
-                      <Input {...register("section")} placeholder="Section" className="bg-gray-800 border border-gray-700 text-white px-3 py-2 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 transition duration-150" />
+                      <Input {...register("section")} placeholder="Section" className="bg-gray-800/20 border border-gray-700/20 text-white px-3 py-2 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 transition duration-150" />
                     </div>
                   ) : (
                     <div className="flex flex-wrap gap-2 text-sm text-gray-300">
@@ -183,7 +183,7 @@ export default function Profile({ profile }: { profile: ProfileProps }) {
           </Card>
 
           <div className="grid gap-6 md:grid-cols-2 mt-6">
-            <Card className="bg-gray-900 border-gray-800">
+            <Card className="bg-gray-900/20 border-gray-800/20">
               <CardHeader>
                 <div className="flex items-center gap-2">
                   <FileText className="w-5 h-5 text-blue-400" />
@@ -192,14 +192,14 @@ export default function Profile({ profile }: { profile: ProfileProps }) {
               </CardHeader>
               <CardContent>
                 {isEditing ? (
-                  <Textarea {...register("bio")} className="min-h-[120px] bg-gray-800 border-gray-700 focus:outline-none text-white focus:ring-1 focus:ring-blue-500" />
+                  <Textarea {...register("bio")} className="min-h-[120px] bg-gray-800/20 border-gray-700/20 focus:outline-none text-white focus:ring-1 focus:ring-blue-500" />
                 ) : (
                   <p className="text-gray-300 whitespace-pre-wrap">{updatedProfile.bio || "No bio available."}</p>
                 )}
               </CardContent>
             </Card>
 
-            <Card className="bg-gray-900 border-gray-800">
+            <Card className="bg-gray-900/20 border-gray-800/20">
               <CardHeader>
                 <div className="flex items-center gap-2">
                   <Code className="w-5 h-5 text-green-400" />
@@ -208,18 +208,18 @@ export default function Profile({ profile }: { profile: ProfileProps }) {
               </CardHeader>
               <CardContent>
                 {isEditing ? (
-                  <Input {...register("skills")} className="bg-gray-800 border-gray-700 text-white focus:outline-none focus:ring-1 focus:ring-blue-500" placeholder="e.g. JavaScript, React, Node.js" />
+                  <Input {...register("skills")} className="bg-gray-800/20 border-gray-700/20 text-white focus:outline-none focus:ring-1 focus:ring-blue-500" placeholder="e.g. JavaScript, React, Node.js" />
                 ) : (
                   <div className="flex flex-wrap gap-2">
                     {updatedProfile.skills.map((skill, idx) => (
-                      <Badge key={idx} className="bg-gray-700 text-gray-200">{skill}</Badge>
+                      <Badge key={idx} className="bg-gray-700/20 text-gray-200">{skill}</Badge>
                     ))}
                   </div>
                 )}
               </CardContent>
             </Card>
           </div>
-          <Card className="bg-gray-900 border-gray-800 mt-6">
+          <Card className="bg-gray-900/20 border-gray-800/20 mt-6">
             <CardHeader>
               <div className="flex items-center gap-2">
                 <Code className="w-5 h-5 text-green-400" />
@@ -235,7 +235,7 @@ export default function Profile({ profile }: { profile: ProfileProps }) {
             </CardContent>
           </Card>
 
-          <Card className="bg-gray-900 border-gray-800 mt-6">
+          <Card className="bg-gray-900/20 border-gray-800/20 mt-6">
             <CardHeader>
               <div className="flex items-center gap-2">
                 <Code className="w-5 h-5 text-yellow-400" />
