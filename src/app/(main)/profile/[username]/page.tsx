@@ -16,7 +16,7 @@ export default async function Profile({ params }: { params: Promise<{ username: 
             <Users className="w-12 h-12 text-gray-300" />
           </div>
           <h2 className="text-2xl text-gray-200 font-bold mb-2">User Not Found</h2>
-          <p className="text-muted-foreground">The profile you're looking for doesn't exist.</p>
+          <p className="text-muted-foreground">The profile you&apos;re looking for doesn&apos;t exist.</p>
         </div>
       </div>
     )
