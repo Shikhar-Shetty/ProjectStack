@@ -47,48 +47,57 @@ Built as a group project by our class to streamline and enrich collaborative lea
 
 ---
 
-## Installation
+## 🚀 Quick Start
 
-### 1. Clone the repo
+Ready to get ProjectStack running locally? Follow these simple steps:
+
+### Prerequisites
+- **Node.js** (v18 or higher)
+- **PostgreSQL** database (we recommend [Neon](https://neon.tech/) for free hosting)
+- **Git**
+
+### Installation
+
 ```bash
+# 1. Clone and navigate to the project
 git clone https://github.com/yourusername/projectstack.git
 cd projectstack
-```
 
-### 2. Install dependencies
-```bash
+# 2. Install dependencies
 npm install
-```
 
-### 3. Setup environment variables
-```bash
+# 3. Set up your environment variables
 cp .env.example .env
 ```
 
-### 4. Configure PostgreSQL connection in `.env`
-```bash
-DATABASE_URL="postgresql://..."
+### Environment Setup
+
+Open your `.env` file and add these required variables:
+
+```env
+# Database (get from Neon, Supabase, or your PostgreSQL provider)
+DATABASE_URL="postgresql://username:password@host:port/database"
+
+# Authentication (generate a random secret)
+NEXTAUTH_SECRET="your-super-secret-key"
+NEXTAUTH_URL="http://localhost:3000"
+
+# OAuth (optional - for Google sign-in)
+GOOGLE_CLIENT_ID="your-google-client-id"
+GOOGLE_CLIENT_SECRET="your-google-client-secret"
 ```
 
-### 5. Push schema
+### Database Setup & Launch
+
 ```bash
+# Set up your database schema
 npx prisma db push
-```
 
-### 6. Start dev server
-```bash
+# Start the development server
 npm run dev
 ```
----
 
-## Environmental Variable Setup
-```bash
-    DATABASE_URL=postgresql://...
-    NEXTAUTH_SECRET=your-secret
-    NEXTAUTH_URL=http://localhost:3000
-    GOOGLE_CLIENT_ID=...
-    GOOGLE_CLIENT_SECRET=...
-```
+🎉 **That's it!** Open [http://localhost:3000](http://localhost:3000) and start exploring ProjectStack!
 ---
 
 ## 🤝 Join the Mission — We're Open for Collaborators!
