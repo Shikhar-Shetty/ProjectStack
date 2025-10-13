@@ -30,20 +30,6 @@ Built as a group project by our class to streamline and enrich collaborative lea
 
 ---
 
-## 🧑‍🤝‍🧑 Team Members
-
-> Project by students of **[Your College Name]** — Group [A/B/C]
-
-| Name | Role | GitHub |
-|------|------|--------|
-| Shikhar Shetty | Developer  | [@Shikhar-Shetty](https://github.com/Shikhar-Shetty) |
-| Sunpreeth | Developer | [@Sunpreeth](https://github.com/anysdefdefe) |
-| Vaishnav | Developer | [@vaish73](https://github.com/vaish73) |
-| Shravan Raj | Developer | [@Shravan-Raj](https://github.com/ShravanRajj) |
-| Shreyas BS | Developer | [@Shreyas-BSj](https://github.com/Shreyas-99) |
-
----
-
 ## 🔑 Features
 
 - 📋 **Post and manage your project listings**
