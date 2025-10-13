@@ -117,7 +117,15 @@ Whether you're a developer, designer or just a curious learner — if the vision
 
     🐳 Docker + Vercel + GitHub CI/CD for production-grade DevOps
 
+## 📋 How to Contribute
+
+1. **Check out our [Issues](https://github.com/Shikhar-Shetty/ProjectStack/issues)** for beginner-friendly tasks
+2. **Fork the repository** and create your feature branch
+3. **Follow our coding standards** (ESLint)
+4. **Submit a Pull Request** with a clear description
+
+
 ## 📬 How to Reach Us
 
-Drop an issue in the GitHub repo or shoot a message on LinkedIn/GitHub/Instagram to any of the team members listed above.
-
+We’d love to hear from you!  
+Got suggestions or found a bug? Open an issue on [GitHub](https://github.com/Shikhar-Shetty/ProjectStack)
